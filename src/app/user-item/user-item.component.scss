@@ -1,0 +1,22 @@
+:host {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid silver;
+    max-width: 400px;
+}
+
+.user-name {
+
+}
+
+.action-btns {
+
+}
+
+.action-btns span {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 10px;
+    cursor: pointer;
+}
