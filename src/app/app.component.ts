@@ -11,4 +11,21 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'gdg-app';
+  name = 'Njarasoa';
+  age = 32;
+  count = 2;
+  tempName = 'N/A';
+  mycolor = '';
+
+  increment() {
+    this.count++;
+  }
+
+  decrement() {
+    this.count--;
+  }
+
+  nameChanged(name: string) {
+    this.tempName = name;
+  }
 }
