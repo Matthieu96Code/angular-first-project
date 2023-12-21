@@ -1,31 +1,36 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { UserDetailsComponent } from './user-details/user-details.component';
+import { User } from './user';
+import { UserListComponent } from './user-list/user-list.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
+  imports: [CommonModule, RouterOutlet, UserDetailsComponent, UserListComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'gdg-app';
-  name = 'Njarasoa';
-  age = 32;
-  count = 2;
-  tempName = 'N/A';
-  mycolor = '';
+  users: User[] = [
+    {
+      id: 'a2bf',
+      name: 'RaKNj',
+      sex: 'M'
+    },
+    {
+      id: 'a2aa',
+      name: 'AliK',
+      sex: 'M'
+    },
+    {
+      id: 'a19f',
+      name: 'Ell@d',
+      sex: 'F'
+    }
+  ]
 
-  increment() {
-    this.count++;
-  }
-
-  decrement() {
-    this.count--;
-  }
-
-  nameChanged(name: string) {
-    this.tempName = name;
-  }
+  currenttUser: User = this.users[0];
 }

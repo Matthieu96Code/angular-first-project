@@ -1,17 +1,2 @@
-<label>Nom :</label>
-<input (input)="nameChanged(nameInput.value)" #nameInput />
-<p [class]="mycolor">{{name}}</p>
-<p>{{age + count}}</p>
-<p>{{tempName}}</p>
-
-<div>
-  <p>{{count}}</p>
-  <button (click)="mycolor='red'">Rèed</button>
-  <button (click)="mycolor='green'">Green</button>
-</div>
-
-<div>
-  <p>{{count}}</p>
-  <button (click)="increment()">Increment</button>
-  <button (click)="decrement()">Decrement</button>
-</div>
+<app-user-details [user]="currenttUser"></app-user-details>
+<app-user-list [users]="users"></app-user-list>
